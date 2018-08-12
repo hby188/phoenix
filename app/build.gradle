@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "android.support.pack.phoenix"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+            debug {
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                // VersionName后缀
+                versionNameSuffix "-debug"
+                minifyEnabled false
+                zipAlignEnabled false
+                shrinkResources false
+            }
+            release {
+                // 不显示log
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                // 混淆
+                minifyEnabled true
+                // Zipalign优化
+                zipAlignEnabled true
+                // 移除无用的resource
+                shrinkResources true
+                // 混淆配置
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+    dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+        implementation 'com.android.support:design:26.1.0'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'com.android.support:appcompat-v7:26.1.0'
+        implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'com.android.support.test:runner:1.0.1'
+        androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+        androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+        compile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    }
