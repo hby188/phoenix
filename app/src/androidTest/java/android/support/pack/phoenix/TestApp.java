@@ -65,8 +65,8 @@ public class TestApp {
         try {
 
 //            tastcaseString = FileUtils.readFileToString(new File("/data/local/tmp/alipay_money_000.json"));
-//            tastcaseString = FileUtils.readFileToString(new File("/data/local/tmp/sesame_config.json"));
-            tastcaseString = FileUtils.readFileToString(new File("/sdcard/sesame_config.json"),"utf-8");
+            tastcaseString = FileUtils.readFileToString(new File("/data/local/tmp/sesame_config.json"),"utf-8");
+//            tastcaseString = FileUtils.readFileToString(new File("/sdcard/sesame_config.json"),"utf-8");
 //            tastcaseString = TCPClient.getCase("getCase");
             System.out.println("@@@@@@@"+tastcaseString);
         } catch (Exception e) {
