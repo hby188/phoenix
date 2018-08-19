@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //只启动一次 服务端
+        new DataUtil().start();
     }
 
     @Override
@@ -53,10 +55,17 @@ public class MainActivity extends AppCompatActivity
     }
 
     /** * 点击按钮对应的方法 * @param v */
-    public void openApp(View view){
+    public void openApp(View view) {
         System.out.println("++++++++++++++++++"+view.getId());
 //        Log.i(TAG, "runMyUiautomator: ");
 //        new UiautomatorThread().start();
+        DataUtil dataUtil = new DataUtil();
+        dataUtil.start();
+        try {
+            dataUtil.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         new OpenApp().start();
     }
 

@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/7/13.
+ * @author yinhb
+ * @date 20180817
  * 有效启动shell类
  */
 

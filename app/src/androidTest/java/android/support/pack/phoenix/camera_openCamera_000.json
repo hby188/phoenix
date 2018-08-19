@@ -1,0 +1,67 @@
+{
+    "duration": 11836,
+    "name": "camera_openCamera_000",
+    "version": "",
+    "steps": [
+        {
+            "interuptable": "false",
+            "argument": "",
+            "isMust": "true",
+            "conditionText": "",
+            "action": "pressHome",
+            "conditionType": "has",
+            "type": "uidevice",
+            "value": "",
+            "pause": 1000,
+            "target": "master"
+        },
+        {
+            "interuptable": "false",
+            "argument": "",
+            "isMust": "true",
+            "conditionText": "",
+            "action": "pressHome",
+            "conditionType": "has",
+            "type": "uidevice",
+            "value": "",
+            "pause": 1000,
+            "target": "master"
+        },
+        {
+            "interuptable": "false",
+            "argument": "900,800,400,800,50",
+            "isMust": "true",
+            "conditionText": "",
+            "action": "swipe",
+            "conditionType": "has",
+            "type": "uidevice",
+            "value": "",
+            "pause": 1000,
+            "target": "master"
+        },
+        {
+            "interuptable": "true",
+            "argument": "950,1600",
+            "isMust": "true",
+            "conditionText": "",
+            "action": "click",
+            "conditionType": "has",
+            "type": "uidevice",
+            "value": "",
+            "pause": 1000,
+            "target": "master"
+        },
+        {
+            "interuptable": "false",
+            "argument": "",
+            "isMust": "true",
+            "conditionText": "",
+            "action": "pressBack",
+            "conditionType": "has",
+            "type": "uidevice",
+            "value": "",
+            "pause": 1000,
+            "target": "master"
+        }
+    ]
+}

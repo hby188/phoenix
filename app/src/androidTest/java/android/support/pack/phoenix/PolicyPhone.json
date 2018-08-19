@@ -1,0 +1,23 @@
+{
+
+    "caseInterTime": 10,
+    "interrateTel": 0.5,
+    "interrateSms": 0.5,
+    "actionOnFail": "skip",
+    "interrateAverage": 1.0,
+
+    "paras": [
+    ],
+    "case_set": [
+                {
+                    "name": "camera_openCamera_000",
+                    "sequence": -1,
+                    "times": "-1",
+                    "para": {
+                    },
+                    "accelerateCase": 1,
+                    "accelerateInteraction": 1.0
+                }
+    ]
+}
+

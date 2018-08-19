@@ -1,5 +1,9 @@
 package android.support.pack.phoenix;
 
+/**
+ * @author yinhb
+ * @date 20180817
+ */
 public class CloseApp extends Thread{
         @Override
         public void run() {

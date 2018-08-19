@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.uiautomator.UiDevice;
+import android.support.test.uiautomator.UiObject;
+import android.support.test.uiautomator.UiSelector;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,20 +34,21 @@ public class ExampleInstrumentedTest {
         int i = 0;
         while (i < 3) {
             mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
-            mDevice.pressHome();
-            mDevice.pressHome();
-            Thread.sleep(1500);
+//            mDevice.pressHome();
+//            mDevice.pressHome();
+//            Thread.sleep(1500);
+////            mDevice.click(950, 1600);
+//            mDevice.click(620, 1144);
+//            Thread.sleep(1500);
+//            mDevice.pressBack();
 //            mDevice.click(950, 1600);
-            mDevice.click(620, 1144);
-            Thread.sleep(1500);
+//            Thread.sleep(1500);
+//            mDevice.pressBack();
+            mDevice.pressHome();
+            mDevice.pressHome();
+        UiObject x=mDevice.findObject(new UiSelector().text("支付宝"));
+        x.clickAndWaitForNewWindow();
             mDevice.pressBack();
-            mDevice.click(950, 1600);
-            Thread.sleep(1500);
-            mDevice.pressBack();
-//            mDevice.pressHome();
-//            mDevice.pressHome();
-//        UiObject x=mDevice.findObject(new UiSelector().text("支付宝"));
-//        x.clickAndWaitForNewWindow();
 //        x.click();
             i++;
         }
@@ -112,4 +115,14 @@ public class ExampleInstrumentedTest {
 //        UiObject searchButton = mDevice.findObject(new UiSelector().resourceId("com.sankuai.meituan:id/search"));
 //        searchButton.clickAndWaitForNewWindow();
     }
+
+    @Test
+    public void testStep() throws Exception {
+        mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
+//        mDevice.pressHome();
+        mDevice.findObject(new UiSelector().text("应用程序")).click();
+//        mDevice.findObject(new UiSelector().text("移动数据")).click();
+    }
+
+
 }
